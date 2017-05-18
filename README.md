@@ -1,6 +1,7 @@
 ## DESC
 * 使用Create-React-App创建的项目
 * 用到Redux,React-Redux...
+* 控件库使用的是蚂蚁金服的`antd`
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
