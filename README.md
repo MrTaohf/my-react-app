@@ -1,4 +1,4 @@
-##DESC
+## DESC
 * 使用Create-React-App创建的项目
 * 用到Redux,React-Redux...
 
