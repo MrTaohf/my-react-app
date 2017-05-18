@@ -1,3 +1,7 @@
+##DESC
+* 使用Create-React-App创建的项目
+* 用到Redux,React-Redux...
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
