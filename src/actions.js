@@ -4,7 +4,7 @@
 // Action
 export const ADD_NUMBER = 'ADD_NUMBER';
 export const DELETE_NUMBER = 'DELETE_NUMBER';
-export const TEST = 'TEST';
+export const JUMP_PAGE = 'JUMP_PAGE';
 
 // Action Creator
 const createAction = (type, value) => {

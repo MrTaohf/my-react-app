@@ -1,7 +1,10 @@
 ## DESC
 * 使用Create-React-App创建的项目
-* 用到Redux,React-Redux...
-* 控件库使用的是蚂蚁金服的`antd`
+* 技术选型：React, Redux, React-Redux...
+* 控件库：`antd`
+* 中间件：redux-logger, redux-thunk, redux-promise
+* 网络请求：isomorphic-fetch, (es6-promise)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

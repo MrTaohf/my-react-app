@@ -4,14 +4,19 @@
   "private": true,
   "dependencies": {
     "antd": "^2.10.1",
+    "es6-promise": "^4.1.0",
     "history": "^4.6.1",
+    "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-redux": "next",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",
@@ -46,6 +51,7 @@
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
+    "prop-types": "^15.5.10",
     "react-dev-utils": "^0.5.2",
     "redux-devtools": "^3.4.0",
     "style-loader": "0.13.1",

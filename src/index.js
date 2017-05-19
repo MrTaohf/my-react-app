@@ -2,22 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider, connect } from 'react-redux';
-// import createHistory from 'history/createBrowserHistory';
+import createHistory from 'history/createBrowserHistory';
 import App from './App';
-// import { Route } from 'react-router';
-// import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
-import createAction, { ADD_NUMBER, DELETE_NUMBER, TEST, REQUEST } from './actions';
+import { Route } from 'react-router';
+import { ConnectedRouter } from 'react-router-redux';
+import createAction, { ADD_NUMBER, DELETE_NUMBER, JUMP_PAGE } from './actions';
 import store from './store';
+import Search from './Search';
 
 // history
-// const history = createHistory();
-// middleware
-// const middleware = routerMiddleware(history);
+export const history = createHistory();
 
 // Map Redux state to component props
 const mapStateToProps = state => {
     return {
-        value: state.name
+        value: state.reducer.name
     }
 };
 
@@ -25,9 +24,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         addNumber: () => dispatch(createAction(ADD_NUMBER, 'TAO.HONGFEI')),
-        deleteNumber: () => dispatch(createAction(DELETE_NUMBER, 'HONGFEI.TAO')),
-        test: () => dispatch(createAction(TEST, '陶宏飞')),
-        request: () => dispatch(createAction(REQUEST, ''))
+        deleteNumber: () => dispatch(createAction(DELETE_NUMBER, '陶宏飞')),
+        jumpPage: (path) => dispatch(createAction(JUMP_PAGE, path))
     }
 };
 
@@ -38,13 +36,12 @@ const Container = connect(
 
 ReactDOM.render(
     <Provider store={store}>
-        {/*<ConnectedRouter history={history}>
-         <div>
-         <Route exact path="/" component={Container}/>
-         <Route path="/search" component={SearchComponent}/>
-         </div>
-         </ConnectedRouter>*/}
-        <Container/>
+        <ConnectedRouter history={history}>
+            <div>
+                <Route exact path="/" component={Container}/>
+                <Route path="/search" component={Search}/>
+            </div>
+        </ConnectedRouter>
     </Provider>,
     document.getElementById('root')
 );

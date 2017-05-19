@@ -8,6 +8,7 @@ const onChange = (date, dateString) => {
 
 export default class SearchComponent extends Component {
 
+    //noinspection JSMethodCanBeStatic
     render() {
         return (
             <div>
