@@ -34,7 +34,7 @@ const runAsync3 = () => {
     );
 };
 
-const getNumber = () => {
+/*const getNumber = () => {
     let p = new Promise(
         (resolve, reject) => {
             // 异步操作
@@ -50,7 +50,7 @@ const getNumber = () => {
     );
 
     return p;
-};
+};*/
 
 const resolveData = () => {
 

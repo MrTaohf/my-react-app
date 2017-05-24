@@ -5,11 +5,10 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import reducer from './reducers';
-import { routerReducer } from 'react-router-redux';
-import { routerMiddleware } from 'react-router-redux';
-import { history } from './index';
+import { browserHistory } from 'react-router';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
 
-const middleware = routerMiddleware(history);
+const middleware = routerMiddleware(browserHistory);
 // 中间件-redux-logger
 const logger = createLogger();
 
@@ -17,7 +16,7 @@ const logger = createLogger();
 const store = createStore(
     combineReducers({
         reducer,
-        router: routerReducer
+        routing: routerReducer
     }),
     applyMiddleware(middleware, thunk, logger)
 );

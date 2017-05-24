@@ -7,11 +7,28 @@ export const DELETE_NUMBER = 'DELETE_NUMBER';
 export const JUMP_PAGE = 'JUMP_PAGE';
 
 // Action Creator
-const createAction = (type, value) => {
+
+export const addNumber = (value) => {
+    return (dispatch) => dispatch({
+        type: ADD_NUMBER,
+        value
+    })
+}
+
+export const deleteNumber = (value) => {
     return {
-        type,
+        type: DELETE_NUMBER,
         value
     }
-};
+}
 
-export default createAction;
+// HomePage 的 Actions
+export const TOGGLE_MENU = 'TOGGLE_MENU';
+
+export const toggleMenuAction = (toggle) => {
+    console.log(toggle);
+    return {
+        type: TOGGLE_MENU,
+        toggle
+    }
+}

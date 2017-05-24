@@ -1,7 +1,7 @@
 /**
  * Created by hongfei.tao on 2017/5/18.
  */
-import { ADD_NUMBER, DELETE_NUMBER, JUMP_PAGE } from './actions';
+import { ADD_NUMBER, DELETE_NUMBER, JUMP_PAGE, TOGGLE_MENU } from './actions';
 import { push } from 'react-router-redux';
 
 // Reducer
@@ -12,6 +12,8 @@ const reducer = (state = {}, action) => {
             return { name: action.value };
         case JUMP_PAGE:
             return { jumpPage: push };
+        case TOGGLE_MENU:
+            return { sideCollapsed: !action.toggle };
         default:
             return state;
     }

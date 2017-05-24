@@ -1,6 +1,7 @@
-## DESC
+## 项目简介
+
 * 使用Create-React-App创建的项目
-* 技术选型：React, Redux, React-Redux...
+* 技术选型：React, Redux, React-Redux, React-Router, React-Router-Redux...
 * 控件库：`antd`
 * 中间件：redux-logger, redux-thunk, redux-promise
 * 网络请求：isomorphic-fetch, (es6-promise)
